@@ -5,125 +5,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nexus Gaming Arena - HTML5 Elements Demonstration">
-    <title>Nexus Gaming Arena</title>
+
+    <title>Gaming Arena</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #090b13;
-            color: #eeeeee;
+            background-color: #101010;
+            color: white;
         }
 
         header {
-            background: #111522;
-            padding: 25px;
+            background-color: #1c1c1c;
             text-align: center;
-            border-bottom: 2px solid #725cff;
+            padding: 25px;
         }
 
         header h1 {
-            margin: 5px;
-            font-size: 42px;
-            letter-spacing: 5px;
-            color: #9c8cff;
-        }
-
-        header p {
-            color: #aaa;
-        }
-
-        nav {
-            margin-top: 20px;
+            color: #7c6cff;
+            letter-spacing: 3px;
         }
 
         nav a {
-            color: #c0b8ff;
+            color: #aaa0ff;
             text-decoration: none;
-            margin: 0 12px;
-        }
-
-        nav a:hover {
-            color: white;
+            margin: 15px;
         }
 
         main {
             width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
+            max-width: 1000px;
+            margin: 25px auto;
         }
 
         section,
         article,
         aside {
-            background: #141824;
-            border: 1px solid #292e40;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #171a31, #282052);
-            padding: 45px;
-        }
-
-        .hero h2 {
-            font-size: 34px;
-            color: #ffffff;
-        }
-
-        .hero strong {
-            color: #9c8cff;
+            background-color: #1b1b1b;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
         }
 
         h2 {
-            color: #9c8cff;
-        }
-
-        h3 {
-            color: #d8d4ff;
+            color: #9185ff;
         }
 
         mark {
-            background: #725cff;
+            background-color: #6558d8;
             color: white;
-            padding: 3px 7px;
-            border-radius: 4px;
+            padding: 3px;
         }
 
         .games {
             display: flex;
-            gap: 18px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
-        .game-card {
+        .game {
             flex: 1;
-            min-width: 220px;
-            background: #1b1f2d;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #30364a;
-        }
-
-        .game-icon {
-            font-size: 40px;
-        }
-
-        meter,
-        progress {
-            width: 200px;
-            height: 18px;
+            min-width: 200px;
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 6px;
         }
 
         table {
@@ -131,35 +78,14 @@
             border-collapse: collapse;
         }
 
-        caption {
-            padding: 10px;
-            font-size: 18px;
-            color: #c8c2ff;
-        }
-
         th,
         td {
-            border: 1px solid #373d52;
-            padding: 12px;
-            text-align: left;
+            border: 1px solid #555;
+            padding: 10px;
         }
 
         th {
-            background: #292352;
-            color: #ddd9ff;
-        }
-
-        fieldset {
-            border: 1px solid #41475c;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        legend {
-            color: #aaa0ff;
-            font-weight: bold;
-            padding: 0 8px;
+            background-color: #302a70;
         }
 
         label {
@@ -171,101 +97,50 @@
         select,
         textarea {
             width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            background: #0d1019;
+            padding: 8px;
+            margin-top: 5px;
+            background-color: #111;
             color: white;
-            border: 1px solid #42495d;
-            border-radius: 6px;
+            border: 1px solid #555;
         }
 
         input[type="radio"],
         input[type="checkbox"] {
             width: auto;
-            margin-right: 5px;
         }
 
         input[type="color"] {
-            width: 70px;
-            height: 40px;
+            width: 60px;
         }
 
-        input[type="range"] {
-            width: 100%;
-        }
-
-        button,
         input[type="submit"],
         input[type="reset"] {
             width: auto;
-            background: #725cff;
+            padding: 10px 20px;
+            background-color: #6558d8;
             color: white;
             border: none;
-            padding: 11px 20px;
+            margin-top: 15px;
             cursor: pointer;
-            margin: 5px;
-        }
-
-        button:hover,
-        input[type="submit"]:hover {
-            background: #5945d8;
-        }
-
-        figure {
-            margin: 0;
-        }
-
-        figure svg {
-            width: 100%;
-            max-width: 700px;
-            height: 220px;
-            background: #0d1019;
-            border-radius: 10px;
         }
 
         canvas {
-            display: block;
+            border: 1px solid #6558d8;
+            background-color: #080808;
             max-width: 100%;
-            border: 2px solid #725cff;
-            background: #080a10;
-            border-radius: 8px;
-        }
-
-        pre {
-            background: #080a10;
-            padding: 20px;
-            border-radius: 8px;
-            color: #aaa0ff;
-            overflow-x: auto;
-        }
-
-        code {
-            color: #b8afff;
         }
 
         details {
-            background: #1b1f2d;
-            padding: 15px;
+            background-color: #252525;
+            padding: 12px;
             margin: 10px 0;
-            border-radius: 8px;
-        }
-
-        summary {
-            cursor: pointer;
-            color: #c8c2ff;
-            font-weight: bold;
         }
 
         footer {
-            background: #111522;
+            background-color: #1c1c1c;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             color: #aaa;
-            border-top: 2px solid #725cff;
-        }
-
-        address {
-            font-style: normal;
         }
     </style>
 </head>
@@ -274,18 +149,16 @@
 
 <header>
 
-    <h1>🎮 NEXUS ARENA</h1>
+    <h1>GAMING ARENA</h1>
 
-    <p>
-        <em>Where every player has a story.</em>
-    </p>
+    <p><em>A place for gamers and gaming enthusiasts</em></p>
 
-    <nav aria-label="Main navigation">
+    <nav>
         <a href="#home">Home</a>
         <a href="#games">Games</a>
-        <a href="#rankings">Rankings</a>
+        <a href="#ranking">Ranking</a>
         <a href="#events">Events</a>
-        <a href="#join">Join</a>
+        <a href="#register">Register</a>
     </nav>
 
 </header>
@@ -293,51 +166,51 @@
 
 <main>
 
-    <section id="home" class="hero">
+    <!-- Introduction -->
 
-        <h2>ENTER THE <strong>NEXUS</strong></h2>
+    <section id="home">
+
+        <h2>Welcome to Gaming Arena</h2>
 
         <p>
-            Welcome to <mark>Nexus Arena</mark> —
-            a fictional gaming universe built using HTML5.
+            Welcome to our <mark>Gaming Arena</mark>.
+            This webpage demonstrates different HTML5 elements
+            using a gaming website.
         </p>
 
         <p>
-            Season completion:
-            <progress value="76" max="100">76%</progress>
-            <strong>76%</strong>
+            Season Progress:
+            <progress value="70" max="100">70%</progress>
         </p>
 
     </section>
 
 
-    <section>
+    <!-- Article and Aside -->
 
-        <h2> About Nexus Arena</h2>
+    <section>
 
         <article>
 
-            <h3>More Than Just Gaming</h3>
+            <h2>About Gaming</h2>
 
             <p>
-                Gaming requires <strong>strategy</strong>,
-                <em>quick decisions</em> and teamwork.
-                Every match is an opportunity to improve.
+                Gaming requires strategy, concentration,
+                quick decisions and teamwork.
             </p>
 
             <blockquote>
-                "The next level begins when you refuse to stop learning."
+                Practice makes every player better.
             </blockquote>
 
         </article>
 
         <aside>
 
-            <h3> Pro Tip</h3>
+            <h3>Gaming Tip</h3>
 
             <p>
-                Don't only practice winning.
-                Practice understanding why you lost.
+                Learn from your mistakes and improve your skills.
             </p>
 
         </aside>
@@ -345,65 +218,55 @@
     </section>
 
 
+    <!-- Games -->
+
     <section id="games">
 
-        <h2> Featured Games</h2>
+        <h2>Featured Games</h2>
 
         <div class="games">
 
-            <article class="game-card">
-
-                <div class="game-icon">⚔️</div>
+            <article class="game">
 
                 <h3>Shadow Siege</h3>
 
-                <p>
-                    Tactical multiplayer combat.
-                </p>
+                <p>Multiplayer tactical game.</p>
 
-                <meter min="0" max="100" value="92">
-                    92%
+                <meter min="0" max="100" value="90">
+                    90%
                 </meter>
 
-                <p>Popularity: 92%</p>
+                <p>Popularity: 90%</p>
 
             </article>
 
 
-            <article class="game-card">
+            <article class="game">
 
-                <div class="game-icon">🏎️</div>
+                <h3>Neon Racing</h3>
 
-                <h3>Neon Velocity</h3>
+                <p>High-speed racing game.</p>
 
-                <p>
-                    Futuristic street racing.
-                </p>
-
-                <meter min="0" max="100" value="84">
-                    84%
+                <meter min="0" max="100" value="82">
+                    82%
                 </meter>
 
-                <p>Popularity: 84%</p>
+                <p>Popularity: 82%</p>
 
             </article>
 
 
-            <article class="game-card">
+            <article class="game">
 
-                <div class="game-icon">🚀</div>
+                <h3>Galaxy Hunters</h3>
 
-                <h3>Void Hunters</h3>
+                <p>Space exploration game.</p>
 
-                <p>
-                    Explore unknown galaxies.
-                </p>
-
-                <meter min="0" max="100" value="88">
-                    88%
+                <meter min="0" max="100" value="86">
+                    86%
                 </meter>
 
-                <p>Popularity: 88%</p>
+                <p>Popularity: 86%</p>
 
             </article>
 
@@ -412,52 +275,55 @@
     </section>
 
 
+    <!-- Lists -->
+
     <section>
 
-        <h2>🏆 Player Progression</h2>
+        <h2>Gaming Skills</h2>
 
-        <h3>Rank-Up Journey</h3>
+        <h3>Steps to Improve</h3>
 
         <ol>
-            <li>Learn the game mechanics</li>
-            <li>Master movement and controls</li>
-            <li>Develop a personal strategy</li>
-            <li>Play competitive matches</li>
-            <li>Analyze your performance</li>
+            <li>Learn the game rules</li>
+            <li>Practice regularly</li>
+            <li>Improve reaction time</li>
+            <li>Develop strategies</li>
         </ol>
 
-        <h3>Essential Skills</h3>
+        <h3>Important Skills</h3>
 
         <ul>
-            <li>Reaction Speed</li>
-            <li>Game Sense</li>
-            <li>Communication</li>
             <li>Teamwork</li>
+            <li>Strategy</li>
+            <li>Communication</li>
+            <li>Quick Reaction</li>
         </ul>
 
         <dl>
 
             <dt><strong>FPS</strong></dt>
-            <dd>First Person Shooter.</dd>
+            <dd>First Person Shooter</dd>
 
             <dt><strong>RPG</strong></dt>
-            <dd>Role Playing Game.</dd>
+            <dd>Role Playing Game</dd>
 
             <dt><strong>MOBA</strong></dt>
-            <dd>Multiplayer Online Battle Arena.</dd>
+            <dd>Multiplayer Online Battle Arena</dd>
 
         </dl>
 
     </section>
 
 
-    <section id="rankings">
+    <!-- Table -->
 
-        <h2>👑 Arena Rankings</h2>
+    <section id="ranking">
+
+        <h2>Player Ranking</h2>
 
         <table>
 
-            <caption>Season 12 Top Players</caption>
+            <caption>Top Players</caption>
 
             <thead>
 
@@ -465,7 +331,7 @@
                     <th>Rank</th>
                     <th>Player</th>
                     <th>Wins</th>
-                    <th>XP</th>
+                    <th>Points</th>
                 </tr>
 
             </thead>
@@ -473,24 +339,24 @@
             <tbody>
 
                 <tr>
-                    <td>01</td>
+                    <td>1</td>
                     <td>ShadowX</td>
                     <td>42</td>
                     <td>9850</td>
                 </tr>
 
                 <tr>
-                    <td>02</td>
-                    <td>NovaByte</td>
+                    <td>2</td>
+                    <td>Nova</td>
                     <td>39</td>
                     <td>9210</td>
                 </tr>
 
                 <tr>
-                    <td>03</td>
-                    <td>Rogue7</td>
-                    <td>36</td>
-                    <td>8840</td>
+                    <td>3</td>
+                    <td>Rogue</td>
+                    <td>35</td>
+                    <td>8750</td>
                 </tr>
 
             </tbody>
@@ -499,7 +365,7 @@
 
                 <tr>
                     <td colspan="4">
-                        Rankings reset at the beginning of every season.
+                        Rankings are updated every week.
                     </td>
                 </tr>
 
@@ -510,36 +376,28 @@
     </section>
 
 
+    <!-- Events -->
+
     <section id="events">
 
-        <h2>⚡ Upcoming Events</h2>
+        <h2>Gaming Events</h2>
 
         <details>
 
-            <summary>Night Raid — 5v5 Tournament</summary>
+            <summary>Online Tournament</summary>
 
             <p>
-                A competitive team tournament open to registered players.
+                A competitive tournament for registered players.
             </p>
 
         </details>
 
         <details>
 
-            <summary>Retro Game Night</summary>
+            <summary>Gaming Night</summary>
 
             <p>
-                A casual event featuring classic gaming challenges.
-            </p>
-
-        </details>
-
-        <details>
-
-            <summary>Speedrun Challenge</summary>
-
-            <p>
-                Complete the selected level in the shortest possible time.
+                A casual gaming event for all players.
             </p>
 
         </details>
@@ -547,48 +405,42 @@
     </section>
 
 
+    <!-- Figure and SVG -->
+
     <section>
 
-        <h2>🖼️ Arena Visual</h2>
+        <h2>Gaming Arena Design</h2>
 
         <figure>
 
-            <svg viewBox="0 0 700 220"
-                 role="img"
-                 aria-label="Abstract gaming arena">
+            <svg width="600"
+                 height="200"
+                 viewBox="0 0 600 200">
 
                 <rect x="0"
                       y="0"
-                      width="700"
-                      height="220"
-                      fill="#0d1019"/>
+                      width="600"
+                      height="200"
+                      fill="#080808"/>
 
                 <circle cx="150"
-                        cy="110"
-                        r="65"
-                        fill="#725cff"/>
+                        cy="100"
+                        r="60"
+                        fill="#6558d8"/>
 
                 <rect x="270"
-                      y="55"
-                      width="150"
-                      height="110"
-                      rx="12"
-                      fill="#322b75"/>
+                      y="50"
+                      width="120"
+                      height="100"
+                      fill="#302a70"/>
 
-                <polygon points="550,35 620,180 480,180"
-                         fill="#9c8cff"/>
-
-                <text x="95"
-                      y="118"
-                      fill="white"
-                      font-size="22">
-                    NEXUS
-                </text>
+                <polygon points="500,40 550,150 450,150"
+                         fill="#9185ff"/>
 
             </svg>
 
             <figcaption>
-                <small>Abstract representation of the Nexus Arena.</small>
+                Simple representation of the Gaming Arena.
             </figcaption>
 
         </figure>
@@ -596,64 +448,63 @@
     </section>
 
 
+    <!-- Canvas -->
+
     <section>
 
-        <h2> Canvas Training Zone</h2>
+        <h2>Canvas</h2>
 
-        <p>
-            The canvas below is generated using JavaScript.
-        </p>
-
-        <canvas id="arenaCanvas"
-                width="700"
-                height="220">
+        <canvas id="gameCanvas"
+                width="600"
+                height="180">
             Your browser does not support canvas.
         </canvas>
 
         <script>
-            const canvas = document.getElementById("arenaCanvas");
-            const ctx = canvas.getContext("2d");
 
-            ctx.fillStyle = "#161a29";
-            ctx.fillRect(0, 0, 700, 220);
+            let canvas = document.getElementById("gameCanvas");
+            let ctx = canvas.getContext("2d");
 
-            ctx.fillStyle = "#725cff";
-            ctx.fillRect(45, 55, 180, 110);
+            ctx.fillStyle = "#252525";
+            ctx.fillRect(0, 0, 600, 180);
+
+            ctx.fillStyle = "#6558d8";
+            ctx.fillRect(50, 45, 180, 90);
 
             ctx.beginPath();
-            ctx.arc(470, 110, 65, 0, Math.PI * 2);
-            ctx.fillStyle = "#9c8cff";
+            ctx.arc(430, 90, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = "#9185ff";
             ctx.fill();
 
             ctx.fillStyle = "white";
-            ctx.font = "24px Arial";
-            ctx.fillText("PLAYER ZONE", 75, 120);
+            ctx.font = "22px Arial";
+            ctx.fillText("GAMING ZONE", 75, 100);
+
         </script>
 
     </section>
 
 
+    <!-- Audio and Video -->
+
     <section>
 
-        <h2>🎧 Gaming Media</h2>
+        <h2>Gaming Media</h2>
 
-        <h3>Battle Audio</h3>
+        <h3>Audio</h3>
 
         <audio controls>
-            <source src="battle-theme.mp3" type="audio/mpeg">
+
+            <source src="gaming.mp3" type="audio/mpeg">
+
             Your browser does not support audio.
+
         </audio>
 
-        <p>
-            <small>
-                Add a file named <code>battle-theme.mp3</code>
-                in the same folder to play the audio.
-            </small>
-        </p>
 
-        <h3>Gameplay Video</h3>
+        <h3>Video</h3>
 
-        <video width="600" controls>
+        <video width="500" controls>
 
             <source src="gameplay.mp4" type="video/mp4">
 
@@ -661,80 +512,74 @@
 
         </video>
 
-        <p>
-            <small>
-                Add a file named <code>gameplay.mp4</code>
-                in the same folder to play the video.
-            </small>
-        </p>
-
     </section>
 
 
+    <!-- Other HTML5 Elements -->
+
     <section>
 
-        <h2>⌨️ Gamer Command Center</h2>
+        <h2>HTML5 Elements</h2>
 
         <p>
             Press <kbd>Ctrl</kbd> + <kbd>S</kbd>
-            to save your game settings.
+            to save the webpage.
         </p>
 
         <pre>
-PLAYER PROFILE
--------------------------
-Rank       : Diamond
-Level      : 47
-Wins       : 126
-Experience : 9850 XP
+PLAYER
+------
+Rank: Gold
+Level: 25
+Wins: 50
         </pre>
 
         <p>
-            HTML example:
-            <code>&lt;section&gt;Nexus Arena&lt;/section&gt;</code>
+            Example:
+            <code>&lt;section&gt;Gaming Arena&lt;/section&gt;</code>
         </p>
 
         <p>
-            Gaming formula:
-            XP<sup>2</sup>
+            Water formula: H<sub>2</sub>O
         </p>
 
         <p>
-            Health example:
-            H<sub>2</sub>O
+            Power: XP<sup>2</sup>
         </p>
 
         <p>
             <abbr title="Player versus Player">PvP</abbr>
-            matches are available every weekend.
+            is a common multiplayer mode.
         </p>
 
         <p>
-            Last update:
-            <time datetime="2026-08-18">18 August 2026</time>
+            Last updated:
+            <time datetime="2026-08-18">
+                18 August 2026
+            </time>
         </p>
 
     </section>
 
 
-    <section id="join">
+    <!-- Form -->
 
-        <h2>🎮 Create Your Player Profile</h2>
+    <section id="register">
+
+        <h2>Player Registration</h2>
 
         <form action="#" method="post">
 
             <fieldset>
 
-                <legend>Basic Information</legend>
+                <legend>Player Information</legend>
 
-                <label for="gamername">Gamer Tag</label>
+                <label for="name">Gamer Name</label>
 
                 <input type="text"
-                       id="gamername"
-                       name="gamername"
-                       minlength="3"
-                       maxlength="20"
-                       placeholder="Enter gamer tag"
+                       id="name"
+                       name="name"
+                       placeholder="Enter gamer name"
                        required>
 
 
@@ -743,7 +588,7 @@ Experience : 9850 XP
                 <input type="email"
                        id="email"
                        name="email"
-                       placeholder="player@example.com"
+                       placeholder="Enter email"
                        required>
 
 
@@ -752,7 +597,6 @@ Experience : 9850 XP
                 <input type="password"
                        id="password"
                        name="password"
-                       minlength="6"
                        required>
 
 
@@ -762,8 +606,7 @@ Experience : 9850 XP
                        id="age"
                        name="age"
                        min="13"
-                       max="60"
-                       required>
+                       max="60">
 
             </fieldset>
 
@@ -774,35 +617,33 @@ Experience : 9850 XP
 
                 <label for="game">Favourite Game</label>
 
-                <input list="game-list"
+                <input list="gameList"
                        id="game"
-                       name="game"
-                       placeholder="Choose a game">
+                       name="game">
 
-                <datalist id="game-list">
+                <datalist id="gameList">
 
                     <option value="Shadow Siege"></option>
-                    <option value="Neon Velocity"></option>
-                    <option value="Void Hunters"></option>
-                    <option value="Cyber Strike"></option>
+                    <option value="Neon Racing"></option>
+                    <option value="Galaxy Hunters"></option>
 
                 </datalist>
 
 
-                <label for="platform">Gaming Platform</label>
+                <label for="platform">Platform</label>
 
-                <select id="platform" name="platform">
+                <select id="platform"
+                        name="platform">
 
-                    <option value="">Select platform</option>
+                    <option value="">Select Platform</option>
                     <option value="pc">PC</option>
-                    <option value="playstation">PlayStation</option>
-                    <option value="xbox">Xbox</option>
+                    <option value="console">Console</option>
                     <option value="mobile">Mobile</option>
 
                 </select>
 
 
-                <p>Preferred Game Mode:</p>
+                <p>Game Mode</p>
 
                 <label>
                     <input type="radio"
@@ -819,7 +660,7 @@ Experience : 9850 XP
                 </label>
 
 
-                <p>Favourite Genres:</p>
+                <p>Favourite Genres</p>
 
                 <label>
                     <input type="checkbox"
@@ -844,7 +685,7 @@ Experience : 9850 XP
 
 
                 <label for="level">
-                    Current Skill Level
+                    Skill Level
                 </label>
 
                 <input type="range"
@@ -855,47 +696,46 @@ Experience : 9850 XP
                        value="50">
 
 
-                <label for="colour">
-                    Player Colour
+                <label for="color">
+                    Player Color
                 </label>
 
                 <input type="color"
-                       id="colour"
-                       name="colour"
-                       value="#725cff">
+                       id="color"
+                       name="color">
 
             </fieldset>
 
 
             <fieldset>
 
-                <legend>Additional Details</legend>
+                <legend>Additional Information</legend>
 
-                <label for="birthdate">
+                <label for="date">
                     Gaming Since
                 </label>
 
                 <input type="date"
-                       id="birthdate"
-                       name="birthdate">
+                       id="date"
+                       name="date">
 
 
-                <label for="playtime">
-                    Preferred Play Time
+                <label for="time">
+                    Preferred Gaming Time
                 </label>
 
                 <input type="time"
-                       id="playtime"
-                       name="playtime">
+                       id="time"
+                       name="time">
 
 
-                <label for="website">
-                    Gaming Profile URL
+                <label for="url">
+                    Gaming Profile
                 </label>
 
                 <input type="url"
-                       id="website"
-                       name="website"
+                       id="url"
+                       name="url"
                        placeholder="https://example.com">
 
 
@@ -906,55 +746,38 @@ Experience : 9850 XP
                 <input type="search"
                        id="search"
                        name="search"
-                       placeholder="Search here...">
+                       placeholder="Search">
 
 
-                <label for="logo">
-                    Upload Player Logo
+                <label for="file">
+                    Upload Player Image
                 </label>
 
                 <input type="file"
-                       id="logo"
-                       name="logo"
+                       id="file"
+                       name="file"
                        accept="image/*">
 
 
                 <label for="message">
-                    About Your Gaming Journey
+                    About Your Gaming Experience
                 </label>
 
                 <textarea id="message"
                           name="message"
                           rows="5"
-                          maxlength="300"
-                          placeholder="Tell us about your gaming experience..."></textarea>
+                          placeholder="Write here..."></textarea>
 
             </fieldset>
 
 
-            <button type="submit">
-                ENTER THE ARENA
-            </button>
+            <input type="submit"
+                   value="Register">
 
-            <button type="reset">
-                RESET
-            </button>
+            <input type="reset"
+                   value="Reset">
 
         </form>
-
-    </section>
-
-
-    <section>
-
-        <h2> Quick Access</h2>
-
-        <p>
-            Visit the
-            <a href="#games">Featured Games</a>
-            section or jump directly to
-            <a href="#rankings">Player Rankings</a>.
-        </p>
 
     </section>
 
@@ -963,20 +786,19 @@ Experience : 9850 XP
 
 <footer>
 
-    <p> <strong>NEXUS ARENA</strong></p>
-
-    <p>
-        <small>
-            © 2026 Nexus Arena | HTML5 Laboratory Project
-        </small>
-    </p>
+    <p>Gaming Arena</p>
 
     <address>
-        Gaming Lab • Student Project • support@nexus.example
+        HTML5 Laboratory Project
     </address>
+
+    <p>
+        <small>Copyright 2026 Gaming Arena</small>
+    </p>
 
 </footer>
 
 </body>
+
 </html>
 ```

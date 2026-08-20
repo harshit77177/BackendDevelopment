@@ -13,7 +13,7 @@
     "express",
     "ejs"
   ],
-  "author": "Harsh",
+  "author": "Harshit",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",

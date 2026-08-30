@@ -16,3 +16,6 @@ This repository contains my Backend Development class theory work and laboratory
 - [Lab](Lab) - laboratory experiments and backend projects.
 - [Node.js Express Lab](Lab/Exp%2012/parta) - Express practice project.
 - [Session Control](Lab/Exp%2012/partb) - session-management project files.
+
+Published site
+The GitHub Pages site is available at https://harshit77177.github.io/

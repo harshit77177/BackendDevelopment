@@ -52,4 +52,5 @@
 - **[docker-bind](Theory/docker-bind/README.md)** ([README](Theory/docker-bind/README.md)): A Docker bind-mount exercise showing immediate host-to-container file synchronization.
 - **[docker-build](Theory/docker-build/README.md)** ([README](Theory/docker-build/README.md)): An Nginx image assembled with a custom Dockerfile and orchestrated with Docker Compose.
 - **[express-project](Theory/express-project/README.md)** ([README](Theory/express-project/README.md)): A small standalone Express setup with logging middleware and REST endpoints.
-Published site The GitHub Pages site is available at https://harshit77177.github.io/
+
+🌐Published site The GitHub Pages site is available at- https://harshit77177.github.io/

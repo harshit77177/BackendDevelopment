@@ -53,7 +53,7 @@
 - **[docker-build](Theory/docker-build/README.md)** ([README](Theory/docker-build/README.md)): An Nginx image assembled with a custom Dockerfile and orchestrated with Docker Compose.
 - **[express-project](Theory/express-project/README.md)** ([README](Theory/express-project/README.md)): A small standalone Express setup with logging middleware and REST endpoints.
 
-## Published Site
+## 🔗Published Site
 
 The GitHub Pages website for this Backend Development coursework is available at:
 [https://harshit77177.github.io/](https://harshit77177.github.io/)

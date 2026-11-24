@@ -7,7 +7,7 @@
 
 ## Repository Structure
 
-### Lab Experiments (`Lab/`)
+### Lab Experiments 
 
 - **[Exp 1](Lab/Exp%201/README.md)** ([README](Lab/Exp%201/README.md)): Introductory HTML work and its accompanying report.
 - **[Exp 5](Lab/Exp%205/README.md)** ([README](Lab/Exp%205/README.md)): JavaScript exercises covering arrays, objects, functions, and a browser-based library utility.
@@ -26,7 +26,7 @@
 
 ---
 
-### Theory Lectures & Assignments (`Theory/`)
+### Theory Lectures & Assignments 
 
 - **[Assignment-1-Notes-Manager](Theory/Assignment-1-Notes-Manager/README.md)** ([README](Theory/Assignment-1-Notes-Manager/README.md)): A localStorage-powered in-browser notes manager with dynamic rendering, editing, and filters.
 - **[Assignment-2-PostgreSQL-JSONB](Theory/Assignment-2-PostgreSQL-JSONB/README.md)** ([README](Theory/Assignment-2-PostgreSQL-JSONB/README.md)): PostgreSQL used as both relational and document storage through `jsonb`, including hybrid modeling, GIN indexes, containment queries, updates, and MongoDB comparison.
